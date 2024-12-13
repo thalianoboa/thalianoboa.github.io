@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Video Portfolio - It's Showtime</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Custom Styling */
+			body {
+				font-family: "Source Sans Pro", Helvetica, sans-serif;
+				margin: 0;
+				padding: 0;
+				background-color: #121212;
+				color: #ffffff;
+			}
+
+			#wrapper {
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+			}
+
+			#header {
+				padding: 20px;
+				background-color: #1e1e1e;
+				text-align: center;
+			}
+
+			#header h1 a {
+				color: #f5f5f5;
+				text-decoration: none;
+			}
+
+			#main {
+				display: flex;
+				flex: 1;
+				padding: 40px;
+				gap: 40px;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: flex-start;
+			}
+
+			#main iframe {
+				width: 100%;
+				max-width: 800px;
+				height: 450px;
+				border: none;
+				border-radius: 10px;
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+			}
+
+			#main .description {
+				flex: 1;
+				max-width: 400px;
+			}
+
+			#main .description h2 {
+				font-size: 1.8rem;
+				color: #f5f5f5;
+				margin-bottom: 20px;
+			}
+
+			#main .description p {
+				line-height: 1.6;
+				font-size: 1.1rem;
+				color: #cccccc;
+			}
+
+			#main .description ul {
+				margin-top: 20px;
+				list-style: square;
+				padding-left: 20px;
+				color: #bbbbbb;
+			}
+
+			#main .description ul li {
+				margin-bottom: 10px;
+			}
+
+			#footer {
+				padding: 20px;
+				text-align: center;
+				background-color: #1e1e1e;
+				color: #777777;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+		
+
+			<!-- Main Content -->
+			<div id="main">
+				<!-- YouTube Video Section -->
+				<iframe 
+					src="https://www.youtube.com/embed/jNM5jJIYrlE?autoplay=1" 
+					frameborder="0" 
+					allow="autoplay; fullscreen; picture-in-picture" 
+					allowfullscreen>
+				</iframe>
+
+				<!-- Description Section -->
+				<div class="description">
+					<h2>Loudmouth - Documentary </h2>
+					<p>
+						An intimate portrait of Reverend Al Sharpton, American civil rights and social justice activist and Baptist minister.
+
+									</p>
+				
+
+					<!-- Additional Details -->
+					<ul>
+						<li>Role: Archival Assistant</li>
+						<li>Tribeca Film Festival 2022 Selection
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<h3><a href="index.html">Back to Portfolio</a></h3>
+			</footer>
+		</div>
+	</body>
+</html>

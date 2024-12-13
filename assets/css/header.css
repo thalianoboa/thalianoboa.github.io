@@ -1,0 +1,61 @@
+/* Style for the hamburger menu */
+#menu-toggle {
+    display: none; /* Hide toggle button by default */
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+    outline: none; /* Remove the black border */
+    box-shadow: none;
+    margin-left: auto; /* Push the icon to the far right */
+}
+
+/* Navigation for Desktop */
+#menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    margin-left: 20px;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    #header {
+        display: flex; /* Keep the header items aligned */
+        justify-content: space-between; /* Space between logo and icon */
+        align-items: center; /* Align items vertically in the center */
+    }
+
+    #menu-toggle {
+        display: block; /* Show the toggle button in mobile view */
+    }
+
+    #menu {
+        display: none; /* Hide the menu by default in mobile view */
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%;
+        margin-top: 10px;
+        background-color: #333;
+        padding: 10px 0;
+    }
+
+    #menu.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    #menu li {
+        margin: 10px 0; /* Add space between menu items */
+        text-align: center;
+    }
+}

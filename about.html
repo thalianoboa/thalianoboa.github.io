@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>About - Thalia's Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+/* General Styling */
+
+body {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+/* About Section - Desktop */
+.about-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1100px;
+    width: 100%;
+    background: transparent;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.about-section .image-container {
+    width: 450px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute; /* Place it to the left */
+    left: -50px; /* Move the image further left */
+}
+
+.about-section .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio while filling the container */
+    transition: opacity 0.3s ease; /* Smooth transition effect */
+}
+
+.about-section .image-container img:first-child {
+    opacity: 1; /* Show the first image by default */
+}
+
+.about-section .image-container img:last-child {
+    opacity: 1; /* Ensure the second image is visible */
+}
+
+.about-section .image-container:hover img:first-child {
+    opacity: 0; /* Hide the first image on hover */
+}
+
+.about-section .image-container:hover img:last-child {
+    opacity: 1; /* Show the second image on hover */
+}
+
+.about-section .description {
+    margin-left: 470px; /* Add space to accommodate the image */
+    flex: 1; /* Allow the text to fill remaining space */
+}
+
+.about-section .description h2 {
+    font-size: 1.3rem;
+    color: #f5f5f5;
+}
+
+.about-section .description p {
+    line-height: 1.4;
+    font-size: 1.1rem;
+    color: #cccccc;
+}
+
+/* LinkedIn Icon */
+.linkedin-icon {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.linkedin-icon:hover {
+    color: #cccccc;
+}
+
+.small-text {
+    font-size: 0.9rem !important;
+    color: #cccccc !important;
+    margin-top: 60px; 
+    text-align: right; /* Center the text */
+}
+
+.photo-credit {
+    font-size: 0.9rem; /* Adjust size as needed */
+    color: #cccccc; /* Optional: lighter color */
+    text-align: center; /* Center the text */
+    margin-top: 5px; /* Space above the credit text */
+}
+
+
+
+/* Responsive Design - Mobile Only */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Stack image and text */
+        position: static; /* Remove absolute positioning */
+        align-items: center; /* Center items horizontally */
+        text-align: center;
+        padding: 20px; /* Adjust padding */
+    }
+
+    .about-section .image-container {
+        position: static; /* Reset to natural flow */
+        width: 100%; /* Full width */
+        max-width: 300px; /* Optional: limit maximum width */
+        height: auto; /* Adjust height automatically */
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
+    .about-section .image-container img:last-child {
+        display: none; /* Hide the second image on mobile */
+    }
+
+    .about-section .description {
+        margin-left: 0; /* Remove margin for stacked layout */
+        flex: none; /* Reset flex property */
+        width: 100%; /* Full width */
+    }
+
+    .about-section .description h2 {
+        font-size: 1.2rem; /* Slightly smaller heading */
+    }
+
+    .about-section .description p {
+        font-size: 1rem; /* Adjust paragraph size if needed */
+    }
+}
+
+
+    </style>
+    
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+			<h1><a href="index.html"><strong>THALÍA'S</strong> PORTFOLIO</a></h1>
+			<button id="menu-toggle">☰</button>
+			<nav>
+				<ul id="menu">
+					<li><a href="written_word.html" class="icon solid fa-book">Written Word</a></li>
+					<li><a href="audio.html" class="icon solid fa-music">Audio</a></li>
+					<li><a href="index.html" class="icon solid fa-film">Film/Video</a></li>
+					<li><a href="about.html" class="icon solid fa-info-circle">About</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+
+     
+                <div id="main">
+                    <!-- About Section -->
+                    <div class="about-section">
+                        <div class="image-container">
+                            
+                                <img src="images/profile_picture.JPG" alt="Thalia's Picture" />
+                             
+                            <img src="images/collage mar.jpg" alt="Thalia's Alternate Picture" />
+
+                        </div>
+
+                <div class="description">
+                    <h2>About Me</h2>
+                    <p>I'm an Ecuadorian documentary filmmaker and journalist based in New York City. I focus on the intersections of immigration and the Latino community, arts, and culture.</p>
+                    <p>I have worked as an on-air radio talent and producer for Spanish-speaking media outlets. As a producer for a New York production company, I have worked in the making of documentary and fiction short films, institutional videos, and grant writing.</p>
+                    <p>As a documentarian, I seek to work with a light footprint and capture intimate moments with authenticity. I approach my work with empathy, efficient communication, and creativity.</p>
+                    <p>I recently graduated from Columbia Graduate School of Journalism with honors in documentary filmmaking and documentary thesis production.</p>
+                    <p>Contact: <a href="mailto:tnoboalamar@gmail.com">tnoboalamar@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/thalianoboa/" target="_blank" rel="noopener noreferrer" class="linkedin-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <p class="small-text">Website by <a href="https://github.com/Mandiuu">Carla Mandiola</a></p>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("show");
+    });
+});
+
+
+    
+
+    </script>
+</body>
+</html>

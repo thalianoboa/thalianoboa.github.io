@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Video Portfolio - Lincoln Center</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Custom Styling */
+        body {
+            font-family: "Source Sans Pro", Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        #wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #header {
+            padding: 20px;
+            background-color: #1e1e1e;
+            text-align: center;
+        }
+
+        #header h1 a {
+            color: #f5f5f5;
+            text-decoration: none;
+        }
+
+        #main {
+            display: flex;
+            flex: 1;
+            padding: 40px;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        #main video {
+            flex: 1;
+            max-width: 800px;
+            width: 640px;
+            height: 570px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        #main .description {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        #main .description h2 {
+            font-size: 1.8rem;
+            color: #f5f5f5;
+            margin-bottom: 20px;
+        }
+
+        #main .description p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            color: #cccccc;
+        }
+
+        #main .description ul {
+            margin-top: 20px;
+            list-style: square;
+            padding-left: 20px;
+            color: #bbbbbb;
+        }
+
+        #main .description ul li {
+            margin-bottom: 10px;
+        }
+
+        #footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #1e1e1e;
+            color: #777777;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #main {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            #main .description {
+                text-align: center;
+            }
+
+            #main video {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+
+        <!-- Main Content -->
+        <div id="main">
+            <!-- Video Section -->
+            <video controls autoplay loop>
+                <source src="conga.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Description Section -->
+            <div class="description">
+                <h2>Lincoln Center: Dance Break in Partnership with Headspace</h2>
+                <p>Conga</p>
+                <p>Lincoln Center launched the Dance Break with Headspace, a six-video series on different dance genres worldwide.
+                </p>
+
+                <!-- Additional Details -->
+                <ul>
+                    <li>Roles: Researcher & Writer for English and Spanish versions, Assistant Director, Production Assistant, and Voice-over Talent for the English and Spanish versions.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <h3><a href="index.html">Back to Portfolio</a></h3>
+        </footer>
+    </div>
+</body>
+</html>
