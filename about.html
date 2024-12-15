@@ -59,25 +59,33 @@ body {
 .about-section .image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Maintain aspect ratio while filling the container */
+    object-fit: cover;
     transition: opacity 0.3s ease; /* Smooth transition effect */
+    position: absolute; /* Ensure images stack on top of each other */
+    top: 0; /* Align images to the top of the container */
+    left: 0;
 }
 
 .about-section .image-container img:first-child {
     opacity: 1; /* Show the first image by default */
+    z-index: 1; /* Keep the first image on top initially */
 }
 
 .about-section .image-container img:last-child {
     opacity: 0; /* Hide the second image by default */
+    z-index: 0; /* Keep the second image underneath initially */
 }
 
 .about-section .image-container:hover img:first-child {
     opacity: 0; /* Hide the first image on hover */
+    z-index: 0;
 }
 
 .about-section .image-container:hover img:last-child {
     opacity: 1; /* Show the second image on hover */
+    z-index: 1;
 }
+
 
 .about-section .description {
     margin-left: 470px; /* Add space to accommodate the image */
@@ -124,31 +132,26 @@ body {
 }
 
 /* Responsive Design - Mobile Only */
-@media (max-width: 768px) {
-    .about-section {
-        flex-direction: column; /* Stack image and text */
-        position: static; /* Remove absolute positioning */
-        align-items: center; /* Center items horizontally */
-        text-align: center;
-        padding: 20px; /* Adjust padding */
-    }
 
+/* Responsive Design - Mobile Only */
+@media (max-width: 768px) {
     .about-section .image-container {
-        position: static; /* Reset to natural flow */
-        width: 100%; /* Full width */
+        width: 80%; /* Adjust width as needed */
         max-width: 300px; /* Optional: limit maximum width */
-        height: auto; /* Adjust height automatically */
+        height: auto; /* Maintain aspect ratio */
         margin-bottom: 20px; /* Add spacing below the image */
     }
 
-    .about-section .image-container img:last-child {
-        display: none; /* Hide the second image on mobile */
+    .about-section .image-container img {
+        width: 100%; /* Ensure the image fills the container */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .about-section .description {
         margin-left: 0; /* Remove margin for stacked layout */
         flex: none; /* Reset flex property */
         width: 100%; /* Full width */
+        text-align: center; /* Center-align text */
     }
 
     .about-section .description h2 {
@@ -159,7 +162,6 @@ body {
         font-size: 1rem; /* Adjust paragraph size if needed */
     }
 }
-
 
 
 
