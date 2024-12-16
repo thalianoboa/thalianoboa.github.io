@@ -9,7 +9,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <style>
-/* General Styling */
 
 /* General Styling */
 body {
@@ -52,8 +51,8 @@ body {
     height: 500px;
     border-radius: 10px;
     overflow: hidden;
-    position: absolute; /* Place it to the left */
-    left: -50px; /* Move the image further left */
+    position: absolute; 
+    left: -50px; 
 }
 
 .about-section .image-container img {
@@ -131,20 +130,37 @@ body {
     margin-top: 5px; /* Space above the credit text */
 }
 
-/* Responsive Design - Mobile Only */
 
 /* Responsive Design - Mobile Only */
 @media (max-width: 768px) {
     .about-section .image-container {
-        width: 80%; /* Adjust width as needed */
-        max-width: 300px; /* Optional: limit maximum width */
+        width: 100%; /* Full width for mobile */
+        max-width: 300px; /* Limit maximum width */
         height: auto; /* Maintain aspect ratio */
-        margin-bottom: 20px; /* Add spacing below the image */
+        min-height: 200px; /* Ensure container doesn't collapse */
+        margin: 0 auto 20px; /* Center and add spacing below */
+        position: relative; /* Ensure positioning doesn't affect layout */
     }
 
     .about-section .image-container img {
-        width: 100%; /* Ensure the image fills the container */
+        width: 100%; /* Make images fill the container */
         height: auto; /* Maintain aspect ratio */
+    }
+
+    .about-section .image-container img:first-child {
+        opacity: 1; /* Show the first image by default */
+    }
+
+    .about-section .image-container img:last-child {
+        opacity: 0; /* Hide the second image by default */
+    }
+
+    .about-section .image-container:hover img:first-child {
+        opacity: 0; /* Hide the first image on hover */
+    }
+
+    .about-section .image-container:hover img:last-child {
+        opacity: 1; /* Show the second image on hover */
     }
 
     .about-section .description {
@@ -159,9 +175,12 @@ body {
     }
 
     .about-section .description p {
-        font-size: 1rem; /* Adjust paragraph size if needed */
+        font-size: 1rem; /* Adjust paragraph size */
     }
 }
+
+
+
 
 
 
