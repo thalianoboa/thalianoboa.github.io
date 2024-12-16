@@ -32,7 +32,6 @@ body {
     padding: 40px 20px;
 }
 
-/* About Section - Desktop */
 .about-section {
     display: flex;
     align-items: flex-start;
@@ -58,36 +57,36 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.3s ease; /* Smooth transition effect */
-    position: absolute; /* Ensure images stack on top of each other */
-    top: 0; /* Align images to the top of the container */
+    transition: opacity 0.3s ease; 
+    position: absolute; 
+    top: 0; 
     left: 0;
 }
 
 .about-section .image-container img:first-child {
-    opacity: 1; /* Show the first image by default */
-    z-index: 1; /* Keep the first image on top initially */
+    opacity: 1; 
+    z-index: 1; 
 }
 
 .about-section .image-container img:last-child {
-    opacity: 0; /* Hide the second image by default */
-    z-index: 0; /* Keep the second image underneath initially */
+    opacity: 0; 
+    z-index: 0; 
 }
 
 .about-section .image-container:hover img:first-child {
-    opacity: 0; /* Hide the first image on hover */
+    opacity: 0; 
     z-index: 0;
 }
 
 .about-section .image-container:hover img:last-child {
-    opacity: 1; /* Show the second image on hover */
+    opacity: 1; 
     z-index: 1;
 }
 
 
 .about-section .description {
-    margin-left: 470px; /* Add space to accommodate the image */
-    flex: 1; /* Allow the text to fill remaining space */
+    margin-left: 470px; 
+    flex: 1; 
 }
 
 .about-section .description h2 {
@@ -119,62 +118,61 @@ body {
     font-size: 0.9rem !important;
     color: #cccccc !important;
     margin-top: 60px; 
-    text-align: right; /* Align text to the right */
+    text-align: right; 
 }
 
 .photo-credit {
-    font-size: 0.9rem; /* Adjust size as needed */
-    color: #cccccc; /* Optional: lighter color */
-    text-align: center; /* Center the text */
-    margin-top: 5px; /* Space above the credit text */
+    font-size: 0.9rem; 
+    color: #cccccc; 
+    text-align: center; 
+    margin-top: 5px; 
 }
 
 
-/* Responsive Design - Mobile Only */
 @media (max-width: 768px) {
     .about-section .image-container {
-        width: 100%; /* Full width for mobile */
-        max-width: 300px; /* Limit maximum width */
-        height: auto; /* Maintain aspect ratio */
-        min-height: 200px; /* Ensure container doesn't collapse */
-        margin: 0 auto 20px; /* Center and add spacing below */
-        position: relative; /* Ensure positioning doesn't affect layout */
+        width: 100%; 
+        max-width: 300px; 
+        height: auto; 
+        min-height: 200px; 
+        margin: 0 auto 20px; 
+        position: relative; 
     }
 
     .about-section .image-container img {
-        width: 100%; /* Make images fill the container */
-        height: auto; /* Maintain aspect ratio */
+        width: 100%; 
+        height: auto; 
     }
 
     .about-section .image-container img:first-child {
-        opacity: 1; /* Show the first image by default */
+        opacity: 1; 
     }
 
     .about-section .image-container img:last-child {
-        opacity: 0; /* Hide the second image by default */
+        opacity: 0; 
     }
 
     .about-section .image-container:hover img:first-child {
-        opacity: 0; /* Hide the first image on hover */
+        opacity: 0; 
     }
 
     .about-section .image-container:hover img:last-child {
-        opacity: 1; /* Show the second image on hover */
+        opacity: 1; 
     }
 
     .about-section .description {
-        margin-left: 0; /* Remove margin for stacked layout */
-        flex: none; /* Reset flex property */
-        width: 100%; /* Full width */
-        text-align: center; /* Center-align text */
+        margin-left: 0; 
+        flex: none; 
+        width: 100%; 
+        text-align: center; 
     }
 
     .about-section .description h2 {
-        font-size: 1.2rem; /* Slightly smaller heading */
+        font-size: 1.2rem; 
     }
 
     .about-section .description p {
-        font-size: 1rem; /* Adjust paragraph size */
+        font-size: 1rem; 
     }
 }
 
